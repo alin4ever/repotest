@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="jumbotron">
+		<h1>Let's get you this App!</h1>
+	</div>
+	<div class="container">
+		<div class="content-section">
+			<form method="POST" action="">
+					{{ form.hidden_tag() }}
+					<legend class="border-bottom mb-4">Github Auto Duplicative App</legend>
+					<div class="form-group">
+						{{ form.submit(class="btn btn-outline-info") }}
+					</div>
+			</form>
+		</div>
+		<div class="border-top pt-3">
+			<small class="text-muted">
+				Already have the App? <a class="ml-2" href="{{ url_for('docs') }}">Check Documentation</a>
+			</small>
+		</div>
+	</div>
+{% endblock content %}
